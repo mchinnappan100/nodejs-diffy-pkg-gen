@@ -31,10 +31,10 @@ diffy-pkg-gen   --csv-file /tmp/diff3.csv --metadata-mapping-file ~/prs-2-xml/sc
 
 make-prs-to-pkg  30102,30036  --metadata-mapping-path ~/prs-2-xml/scripts/metadata_mapping.json 
 
-## Find Custom Label PRS
+## Find Custom Label PRs
 grep -irn labels /tmp/diff3.csv | cut -f 8 -d ','
 
-## Find Static Resource PRS
+## Find Static Resource PRs
 grep -irn staticresources /tmp/diff3.csv | cut -f 8 -d ','
 
 #============================================================================
