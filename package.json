@@ -1,13 +1,17 @@
 {
   "name": "diffy-pkg-gen",
   "version": "0.0.1",
-  "description": "Generate package.xml for Salesforce Metadata API from CSV and metadata mapping",
+  "description": "Generate package.xml and PR info for Salesforce Metadata API",
   "main": "src/index.js",
   "bin": {
-    "diffy-pkg-gen": "src/index.js"
+    "diffy-pkg-gen": "src/index.js",
+    "pr-info": "src/prInfo.js",
+    "prs-to-pkg": "src/prsToPkg.js"
   },
   "scripts": {
     "start": "node src/index.js",
+    "pr-info": "node src/prInfo.js",
+    "prs-to-pkg": "node src/prsToPkg.js",
     "lint": "eslint src --ext js",
     "test": "mocha test"
   },
@@ -15,7 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^12.1.0",
-    "csv-parse": "^5.5.6"
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.1",
+    "open": "^10.1.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

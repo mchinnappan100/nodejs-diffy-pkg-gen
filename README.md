@@ -13,10 +13,15 @@ npm install
 npm link
 ```
 
-## Sample command
-
+## Sample commands
 ```
-diffy-pkg-gen   --csv-file /tmp/diff.csv --metadata-mapping-file ~/prs-2-xml/scripts/metadata_mapping.json --api-version 63.0 --change-types "Added,Modified,Renamed"
 
-diffy-pkg-gen   --csv-file /tmp/diff.csv --metadata-mapping-file ~/prs-2-xml/scripts/metadata_mapping.json --api-version 63.0 --change-types "Deleted"
+#---- run these command in your git repo folder ----
+
+pr-info -p 30102,30036 > /tmp/diff3.csv 
+diffy-pkg-gen   --csv-file /tmp/diff3.csv --metadata-mapping-file ~/prs-2-xml/scripts/metadata_mapping.json --api-version 63.0 --change-types "Added,Modified,Renamed"
+
+#------------------------------
+# for deletions
+diffy-pkg-gen   --csv-file /tmp/diff3.csv --metadata-mapping-file ~/prs-2-xml/scripts/metadata_mapping.json --api-version 63.0 --change-types "Deleted"
 ```
